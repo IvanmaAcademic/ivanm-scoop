@@ -1,37 +1,28 @@
-# Scoop Bucket Template
+# ivanm-scoop
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+Personal Scoop bucket: 自维护工作流核心应用精选。
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+[![Tests](https://github.com/IvanmaAcademic/ivanm-scoop/actions/workflows/ci.yml/badge.svg)](https://github.com/IvanmaAcademic/ivanm-scoop/actions/workflows/ci.yml)
+[![Excavator](https://github.com/IvanmaAcademic/ivanm-scoop/actions/workflows/excavator.yml/badge.svg)](https://github.com/IvanmaAcademic/ivanm-scoop/actions/workflows/excavator.yml)
 
-## How do I use this template?
+收录原则:只放自己实际在用的、且官方大桶缺失或维护不佳的应用。版本由 Excavator 每 4 小时自动跟进。
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Allow writing to the repository from within GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Select `Read and write permissions`.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
+## Apps
+
+| App | 说明 |
+| --- | --- |
+| obsidian | 笔记 (extras 同步) |
+| zotero | 文献管理 (extras 同步) |
+| yazi | 终端文件管理器 (main 同步) |
+| scoop-search | scoop 快速搜索 (main 同步) |
+| pot-desktop | 划词翻译 (extras-cn 同步) |
+| vscode-insiders-portable | VS Code Insiders 便携版 (自定义 manifest,数据持久化到 persist) |
 
 ## How do I install these manifests?
 
-After manifests have been committed and pushed, run the following:
-
 ```pwsh
-scoop bucket add <bucketname> https://github.com/<username>/<bucketname>
-scoop install <bucketname>/<manifestname>
+scoop bucket add ivanm-scoop https://github.com/IvanmaAcademic/ivanm-scoop
+scoop install ivanm-scoop/<app>
 ```
 
 ## How do I contribute new manifests?
